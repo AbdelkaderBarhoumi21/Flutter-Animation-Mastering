@@ -9,7 +9,7 @@ class AnAnimatedOpacityScreen extends StatefulWidget {
 }
 
 class _AnAnimatedOpacityScreenState extends State<AnAnimatedOpacityScreen> {
- double _opacity = 1;
+  double _opacity = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,16 @@ class _AnAnimatedOpacityScreenState extends State<AnAnimatedOpacityScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Only opacity will be animated(opacity), not the child widget(the container in this case(width, height, color))
             AnimatedOpacity(
               opacity: _opacity,
-              duration: Duration(milliseconds: 500),
+              curve: Curves.bounceInOut,
+              onEnd: () {
+                ScaffoldMessenger.of(
+                  context,
+                ).showSnackBar(SnackBar(content: Text('Animation Ended')));
+              },
+              duration: Duration(milliseconds: 1000),
               child: Container(width: 100, height: 100, color: Colors.blue),
             ),
             SizedBox(height: 20),
@@ -29,11 +36,11 @@ class _AnAnimatedOpacityScreenState extends State<AnAnimatedOpacityScreen> {
                 if (_opacity == 0) {
                   _opacity = 1;
                 } else {
-                  _opacity = 0;
+                  _opacity = 0.5;
                 }
                 setState(() {});
               },
-              child: Text('Change Size'),
+              child: Text('Change Opacity'),
             ),
           ],
         ),
