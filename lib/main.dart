@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation_mastering/animated_container/animated_align.dart';
 import 'package:flutter_animation_mastering/animated_container/animated_container.dart';
 import 'package:flutter_animation_mastering/animated_container/animated_opacity.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: AnAnimatedOpacityScreen(),
+      home: AnimatedAlignScreen(),
     );
   }
 }
