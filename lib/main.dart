@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animation_mastering/animated_container/animated_align.dart';
 import 'package:flutter_animation_mastering/animated_container/animated_container.dart';
 import 'package:flutter_animation_mastering/animated_container/animated_opacity.dart';
+import 'package:flutter_animation_mastering/animated_container/animated_position.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Mastering Animation',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: AnimatedAlignScreen(),
+      home: AnimatedPositionScreen(),
     );
   }
 }
