@@ -5,6 +5,7 @@ import 'package:flutter_animation_mastering/animated_container/animated_opacity.
 import 'package:flutter_animation_mastering/animated_container/animated_padding.dart';
 import 'package:flutter_animation_mastering/animated_container/animated_position.dart';
 import 'package:flutter_animation_mastering/animated_container/animated_scale.dart';
+import 'package:flutter_animation_mastering/examples/test_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: AnimatedScaleScreen(),
+      home: TestScreen(),
     );
   }
 }
