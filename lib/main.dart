@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animation_mastering/animated_container/animated_align.dart';
-import 'package:flutter_animation_mastering/animated_container/animated_container.dart';
-import 'package:flutter_animation_mastering/animated_container/animated_opacity.dart';
-import 'package:flutter_animation_mastering/animated_container/animated_padding.dart';
-import 'package:flutter_animation_mastering/animated_container/animated_position.dart';
-import 'package:flutter_animation_mastering/animated_container/animated_scale.dart';
+import 'package:flutter_animation_mastering/animated_widgets/animated_align.dart';
+import 'package:flutter_animation_mastering/animated_widgets/animated_container.dart';
+import 'package:flutter_animation_mastering/animated_widgets/animated_cross_fade.dart';
+import 'package:flutter_animation_mastering/animated_widgets/animated_opacity.dart';
+import 'package:flutter_animation_mastering/animated_widgets/animated_padding.dart';
+import 'package:flutter_animation_mastering/animated_widgets/animated_position.dart';
+import 'package:flutter_animation_mastering/animated_widgets/animated_scale.dart';
 import 'package:flutter_animation_mastering/examples/test_screen.dart';
 import 'package:flutter_animation_mastering/examples/test_screen_2.dart';
 import 'package:flutter_animation_mastering/examples/test_screen_3.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: TestScreen3(),
+      home: AnimatedCrossFadeScreen(),
     );
   }
 }

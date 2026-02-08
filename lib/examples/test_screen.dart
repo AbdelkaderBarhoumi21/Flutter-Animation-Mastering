@@ -40,6 +40,7 @@ class _TestScreenState extends State<TestScreen> {
                     _isLoading = !_isLoading;
                   });
                   Future.delayed(Duration(seconds: 3)).then((value) {
+                    if (!mounted) return;
                     setState(() {
                       _isLoading = false;
                     });
