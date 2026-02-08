@@ -6,6 +6,8 @@ import 'package:flutter_animation_mastering/animated_container/animated_padding.
 import 'package:flutter_animation_mastering/animated_container/animated_position.dart';
 import 'package:flutter_animation_mastering/animated_container/animated_scale.dart';
 import 'package:flutter_animation_mastering/examples/test_screen.dart';
+import 'package:flutter_animation_mastering/examples/test_screen_2.dart';
+import 'package:flutter_animation_mastering/examples/test_screen_3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: TestScreen(),
+      home: TestScreen3(),
     );
   }
 }
